@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tip calculator</title>
+</head>
+<body>
+     <main id="container">
+        <h1>Tip calculator</h1>
+
+        <section>
+            <div class="flex">
+                <label for="billAmount">Bill Amount</label>
+                <input type="number" placeholder="Your Bill" id="billAmount"/>
+            </div>
+            <div>
+                <div class="flex">
+                    <label for="tipAmount">Tip amount</label>
+                    <span id="tipPercent">0%</span>
+                </div>
+                <input type="range" value="0" id="tipAmount" class="range">
+            </div>
+            <div class="flex spc-btwn">
+                <span>Tip</span>
+                <span id="tipValue"></span>
+            </div>
+            <hr>
+            <div class="flex spc-btwn total">
+                <span>Total</span>
+                <span id="totalWithTip"></span>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div class="flex">
+                    <label for="splitInput">Split</label>
+                    <span id="splitPeople">1 Person</span>
+                </div>
+                <input type="range" min="1" max="10" value="1" id="splitInput" class="range">
+            </div>
+            
+            <div class="flex spc-btwn">
+                <span>Tip Each</span>
+                <span id="tipEach"></span>
+            </div>
+
+            <div class="flex spc-btwn">
+                <span>Bill each</span>
+                <span id="billEach"></span>
+            </div>
+        </section>
+     </main>
+
+     <script src="script.js"></script>
+</body>
+</html>
